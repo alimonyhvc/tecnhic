@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #searchBox {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #countryList {
+            list-style: none;
+            padding: 0;
+        }
+        #countryList li {
+            padding: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Country Search</h1>
+    <input type="text" id="searchBox" placeholder="Search for a country...">
+    <ul id="countryList">
+        <li>Azerbaijan</li>
+        <li>Armenia</li>
+        <li>Iceland</li>
+        <li>Ireland</li>
+        <li>Andorra</li>
+        <li>Ukraine</li>
+        <li>Germany</li>
+        <li>Italy</li>
+        <li>Spain</li>
+        <li>Sweden</li>
+        <li>Norway</li>
+        <li>Hungary</li>
+        <li>Estonia</li>
+        <li>Denmark</li>
+        <li>Austria</li>
+        <li>Bahrain</li>
+        <li>Portugal</li>
+        <li>United Arab Emirates</li>
+        <li>Saudi Arabia</li>
+        <li>United Kingdom</li>
+        <li>Morocco</li>
+        <li>Greece</li>
+        <li>Jordan</li>
+        <li>Kuwait</li>
+        <li>Poland</li>
+        <li>Belgium</li>
+        <li>Bulgaria</li>
+        <li>Czech Republic</li>
+        <li>Georgia</li>
+        <li>South Africa</li>
+        <li>Romania</li>
+        <li>Switzerland</li>
+        <li>Oman</li>
+        <li>Slovakia</li>
+        <li>Slovenia</li>
+        <li>Serbia</li>
+        <li>France</li>
+        <li>Finland</li>
+        <li>Qatar</li>
+        <li>Cyprus</li>
+        <li>Croatia</li>
+        <li>Kazakhstan</li>
+        <li>Lithuania</li>
+        <li>Luxembourg</li>
+        <li>Latvia</li>
+        <li>Malta</li>
+        <li>Mauritius</li>
+        <li>Moldova</li>
+        <li>Netherlands</li>
+        <li>Australia</li>
+        <li>Philippines</li>
+        <li>Mexico</li>
+        <li>Brazil</li>
+        <li>Japan</li>
+        <li>Peru</li>
+        <li>Thailand</li>
+        <li>Chile</li>
+        <li>Dominican Republic</li>
+        <li>Malaysia</li>
+        <li>New Zealand</li>
+        <li>Uruguay</li>
+        <li>Estonia</li>
+    </ul>
+
+    <script>
+        const searchBox = document.getElementById('searchBox');
+        const countryList = document.getElementById('countryList');
+        const countries = Array.from(countryList.getElementsByTagName('li'));
+
+        searchBox.addEventListener('input', function() {
+            const searchTerm = searchBox.value.toLowerCase();
+            countries.forEach(country => {
+                if (country.textContent.toLowerCase().includes(searchTerm)) {
+                    country.style.display = '';
+                } else {
+                    country.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body></html>
